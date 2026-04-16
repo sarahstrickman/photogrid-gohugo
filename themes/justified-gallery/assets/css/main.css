@@ -286,6 +286,21 @@ a {
   position: relative;
 }
 
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: black;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gallery-item:hover::after {
+  opacity: 0.21;
+}
+
 .gallery-item a:not(.view-page-btn) {
   display: block;
   width: 100%;
