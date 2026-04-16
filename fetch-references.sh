@@ -24,3 +24,4 @@ clone_or_pull() {
 
 clone_or_pull "https://github.com/flickr/justified-layout.git"
 clone_or_pull "https://github.com/dimsemenov/PhotoSwipe.git"
+clone_or_pull "https://github.com/dimsemenov/photoswipe-video-plugin.git"
