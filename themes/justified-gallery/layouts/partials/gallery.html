@@ -3,7 +3,7 @@
     {{ if not .Params.private }}
       {{ $page := . }}
       {{ range where (.Resources.ByType "image") "Params.display" "eq" true }}
-        <div class="gallery-item">
+        <div class="gallery-item" data-categories="{{ range $i, $cat := $page.Params.categories }}{{ if $i }},{{ end }}{{ $cat | lower }}{{ end }}">
           <a href="{{ .RelPermalink }}"
              data-pswp-width="{{ .Width }}"
              data-pswp-height="{{ .Height }}"

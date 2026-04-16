@@ -1,4 +1,4 @@
 {{ define "main" }}
-  {{ .Content }}
+  {{ partial "filter.html" . }}
   {{ partial "gallery.html" site.RegularPages.ByDate.Reverse }}
 {{ end }}
