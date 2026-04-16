@@ -1,5 +1,7 @@
 # Photogrid Hugo Theme
 
+**Demo:** <https://photogrid-gohugo.pages.dev/>
+
 A Hugo theme for photo gallery and art portfolio sites. Features a responsive justified image grid layout, category filtering, PhotoSwipe lightbox, and dark/light mode toggle.
 
 ## Features
@@ -93,7 +95,7 @@ Add or modify entries in your site's `hugo.toml` to customize navigation.
 
 ## Content Model
 
-Each post is a [Hugo page bundle](https://gohugo.io/content-management/page-bundles/): a folder containing `index.md` and one or more image files.
+Each post is a [Hugo page bundle](https://gohugo.io/content-management/page-bundles/): a folder containing `index.md` and one or more image files. See <https://github.com/sarahstrickman/gallery.sarahstrickman.com> for an example content repo.
 
 ### Creating a Post
 
