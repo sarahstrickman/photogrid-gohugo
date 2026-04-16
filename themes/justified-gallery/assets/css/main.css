@@ -1,12 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+  --bg: #1e1e22;
+  --text: #e0e0e0;
+  --text-muted: #888;
+  --border: #3a3a40;
+  --surface: #28282e;
+  --hover: #33333a;
+  --link: #8ab4f8;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --btn-active-bg: #e0e0e0;
+  --btn-active-text: #1e1e22;
+}
+
+[data-theme="light"] {
+  --bg: #f5f5f5;
+  --text: #222;
+  --text-muted: #666;
+  --border: #ddd;
+  --surface: #fff;
+  --hover: #eee;
+  --link: #0055cc;
+  --shadow: rgba(0, 0, 0, 0.12);
+  --btn-active-bg: #222;
+  --btn-active-text: #fff;
+}
+
 body {
-  color: #222;
-  font-family: sans-serif;
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
   line-height: 1.5;
   margin: 1rem;
+  background: var(--bg);
 }
 
 header {
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid var(--border);
   margin-bottom: 1rem;
 }
 
@@ -21,7 +50,7 @@ header {
 .site-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #222;
+  color: var(--text);
   text-decoration: none;
 }
 
@@ -52,7 +81,7 @@ header {
   display: block;
   width: 24px;
   height: 2px;
-  background-color: #222;
+  background-color: var(--text);
   transition: transform 0.3s, opacity 0.3s;
 }
 
@@ -73,10 +102,10 @@ header {
   position: absolute;
   top: 100%;
   right: 0;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 6px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 16px var(--shadow);
   min-width: 180px;
   opacity: 0;
   visibility: hidden;
@@ -100,12 +129,12 @@ header {
 .nav-menu nav ul li a {
   display: block;
   padding: 0.5rem 1rem;
-  color: #222;
+  color: var(--text);
   white-space: nowrap;
 }
 
 .nav-menu nav ul li a:hover {
-  background: #f5f5f5;
+  background: var(--hover);
 }
 
 /* Overlay to capture outside clicks */
@@ -121,12 +150,13 @@ header {
 }
 
 footer {
-  border-top: 1px solid #222;
+  border-top: 1px solid var(--border);
   margin-top: 1rem;
+  color: var(--text-muted);
 }
 
 a {
-  color: #00e;
+  color: var(--link);
   text-decoration: none;
 }
 
@@ -143,33 +173,33 @@ a {
 
 .filter-btn {
   background: none;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   border-radius: 6px;
   cursor: pointer;
   padding: 0.4rem 0.5rem;
   display: flex;
   align-items: center;
-  color: #222;
+  color: var(--text);
   transition: background 0.2s, color 0.2s;
 }
 
 .filter-btn:hover {
-  background: #f5f5f5;
+  background: var(--hover);
 }
 
 .filter-btn.active {
-  background: #222;
-  color: #fff;
+  background: var(--btn-active-bg);
+  color: var(--btn-active-text);
 }
 
 .filter-menu {
   position: absolute;
   top: 100%;
   right: 0;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 6px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 16px var(--shadow);
   min-width: 200px;
   opacity: 0;
   visibility: hidden;
@@ -188,8 +218,9 @@ a {
 .filter-menu-header {
   padding: 0.5rem 1rem;
   font-weight: bold;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border);
   font-size: 0.875rem;
+  color: var(--text);
 }
 
 .filter-options {
@@ -208,14 +239,14 @@ a {
 }
 
 .filter-option:hover {
-  background: #f5f5f5;
+  background: var(--hover);
 }
 
 .filter-actions {
   display: flex;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border);
 }
 
 .filter-actions button {
@@ -223,13 +254,14 @@ a {
   padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
   cursor: pointer;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   border-radius: 4px;
-  background: #fff;
+  background: var(--surface);
+  color: var(--text);
 }
 
 .filter-actions button:hover {
-  background: #f5f5f5;
+  background: var(--hover);
 }
 
 .filter-overlay {
@@ -274,4 +306,30 @@ a {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+/* Dark mode toggle */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-top: 1px solid var(--border);
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--text);
+  user-select: none;
+}
+
+.theme-toggle:hover {
+  background: var(--hover);
+}
+
+.theme-toggle-label {
+  pointer-events: none;
+}
+
+.theme-toggle-icon {
+  font-size: 1rem;
+  pointer-events: none;
 }
