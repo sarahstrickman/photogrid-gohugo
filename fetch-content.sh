@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_URL="replace-with-your-repo-url"
+# Replace this URL with the actual repository URL where your content is stored.
+REPO_URL="git@github.com:sarahstrickman/gallery.sarahstrickman.com.git"
 CONTENT_DIR="$(cd "$(dirname "$0")" && pwd)/content"
 
 if [ -d "$CONTENT_DIR/.git" ]; then
