@@ -3,7 +3,6 @@ body {
   font-family: sans-serif;
   line-height: 1.5;
   margin: 1rem;
-  max-width: 768px;
 }
 
 header {
@@ -19,4 +18,37 @@ footer {
 a {
   color: #00e;
   text-decoration: none;
+}
+
+/* Gallery */
+#gallery {
+  visibility: hidden;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Single post images */
+.post-image {
+  margin: 1rem 0;
+}
+
+.post-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

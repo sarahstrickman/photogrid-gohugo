@@ -1,0 +1,18 @@
+<div id="gallery" style="visibility: hidden">
+  {{ range . }}
+    {{ if not .Params.private }}
+      {{ $page := . }}
+      {{ range where (.Resources.ByType "image") "Params.display" "eq" true }}
+        <div class="gallery-item">
+          <a href="{{ $page.RelPermalink }}">
+            <img src="{{ .RelPermalink }}"
+                 width="{{ .Width }}"
+                 height="{{ .Height }}"
+                 alt="{{ $page.Title }}"
+                 loading="lazy">
+          </a>
+        </div>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</div>

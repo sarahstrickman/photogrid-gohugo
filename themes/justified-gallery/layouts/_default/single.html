@@ -5,6 +5,14 @@
   {{ $dateHuman := .Date | time.Format ":date_long" }}
   <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
 
+  {{ range .Resources.ByType "image" }}
+    {{ if .Params.display }}
+      <div class="post-image">
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $.Title }}">
+      </div>
+    {{ end }}
+  {{ end }}
+
   {{ .Content }}
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}

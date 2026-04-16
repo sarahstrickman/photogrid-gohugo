@@ -1,5 +1,4 @@
-import justifiedLayout from "./justified-layout.js";
-import * as params from "@params";
+import justifiedLayout from "../references/justified-layout/lib/index.js";
 
 const gallery = document.getElementById("gallery");
 
@@ -9,35 +8,34 @@ if (gallery) {
 
   const aspectRatios = Array.from(items).map((item) => {
     const img = item.querySelector("img");
-    img.style.width = "100%";
-    img.style.height = "auto";
     return parseFloat(img.getAttribute("width")) / parseFloat(img.getAttribute("height"));
   });
 
   function updateGallery() {
-    if (containerWidth === gallery.getBoundingClientRect().width) return;
-    containerWidth = gallery.getBoundingClientRect().width;
+    const newWidth = gallery.getBoundingClientRect().width;
+    if (containerWidth === newWidth) return;
+    containerWidth = newWidth;
 
     const layout = justifiedLayout(aspectRatios, {
-      rowWidth: containerWidth,
-      spacing: Number.isInteger(params.boxSpacing) ? params.boxSpacing : 8,
-      rowHeight: params.targetRowHeight || 288,
-      heightTolerance: Number.isInteger(params.targetRowHeightTolerance) ? params.targetRowHeightTolerance : 0.25,
+      containerWidth: containerWidth,
+      containerPadding: 0,
+      boxSpacing: 8,
+      targetRowHeight: 288,
+      targetRowHeightTolerance: 0.25,
     });
 
     items.forEach((item, i) => {
-      const { width, height, top, left } = layout.boxes[i];
+      const box = layout.boxes[i];
       item.style.position = "absolute";
-      item.style.width = width + "px";
-      item.style.height = height + "px";
-      item.style.top = top + "px";
-      item.style.left = left + "px";
-      item.style.overflow = "hidden";
+      item.style.width = box.width + "px";
+      item.style.height = box.height + "px";
+      item.style.top = box.top + "px";
+      item.style.left = box.left + "px";
     });
 
     gallery.style.position = "relative";
     gallery.style.height = layout.containerHeight + "px";
-    gallery.style.visibility = "";
+    gallery.style.visibility = "visible";
   }
 
   window.addEventListener("resize", updateGallery);
