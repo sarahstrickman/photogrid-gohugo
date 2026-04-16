@@ -14,4 +14,10 @@ if (gallery) {
   });
 
   lightbox.init();
+
+  gallery.querySelectorAll(".view-page-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  });
 }

@@ -283,9 +283,10 @@ a {
 .gallery-item {
   overflow: hidden;
   border-radius: 20px;
+  position: relative;
 }
 
-.gallery-item a {
+.gallery-item a:not(.view-page-btn) {
   display: block;
   width: 100%;
   height: 100%;
@@ -295,6 +296,31 @@ a {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.view-page-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  width: auto;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.gallery-item:hover .view-page-btn {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* Single post images */
