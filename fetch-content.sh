@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_URL="https://github.com/perceocrity/perceocrity-contents.git"
+REPO_URL="replace-with-your-repo-url"
 CONTENT_DIR="$(cd "$(dirname "$0")" && pwd)/content"
 
 if [ -d "$CONTENT_DIR/.git" ]; then

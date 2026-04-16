@@ -1,4 +1,4 @@
-# Repository Context — Perceocrity Gallery
+# Repository Context — PhotoGrid Gallery
 
 Hugo-based art portfolio/gallery site. Content is stored in a separate repo and pulled in via script.
 
@@ -11,9 +11,9 @@ Hugo-based art portfolio/gallery site. Content is stored in a separate repo and 
 ## Project Structure
 
 ```
-hugo.toml                   # Site config (title: Perceocrity, theme: photogrid)
-fetch-content.sh            # Clones/pulls content from perceocrity/perceocrity-contents repo
-fetch-references.sh         # Clones/pulls third-party JS libraries into assets/references/
+hugo.toml                   # Site config (title: PhotoGrid, theme: photogrid)
+fetch-content.sh            # Clones/pulls content from your content repo
+fetch-references.sh         # Clones/pulls third-party libraries into assets/references/
 
 content/posts/              # Page bundles — one folder per post (separate Git repo)
 layouts/                    # Empty — no theme overrides yet
@@ -50,11 +50,7 @@ resources:
 
 ### Categories
 
-| Group       | Values                                                            |
-|-------------|-------------------------------------------------------------------|
-| Type        | `artwork`, `doodles`, `sketchbook`, `illustrations`, `commission`, `logo` |
-| Subject/OC  | `oc`, `percy`, `stella`, `clementine`, `vocaloid`                 |
-| Fandom      | `sky cotl`, `splatoon`, `pokemon`, `kirby`                        |
+These are dynamically pulled from posts.
 
 Nearly every post uses `"artwork"` plus at least one more.
 
