@@ -282,6 +282,7 @@ a {
 
 .gallery-item {
   overflow: hidden;
+  border-radius: 20px;
 }
 
 .gallery-item a {
@@ -292,8 +293,7 @@ a {
 
 .gallery-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 

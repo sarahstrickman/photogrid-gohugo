@@ -1,22 +1,18 @@
-import justifiedLayout from "../references/justified-layout/lib/index.js";
-
 const gallery = document.getElementById("gallery");
 let containerWidth = 0;
+
+const GAP = 10; // in pixels
+const TARGET_COL_WIDTH = 320;
 
 function updateGallery(force = false) {
   if (!gallery) return;
 
   const items = gallery.querySelectorAll(".gallery-item");
   const visibleItems = [];
-  const aspectRatios = [];
 
   items.forEach((item) => {
     if (item.style.display === "none") return;
     visibleItems.push(item);
-    const img = item.querySelector("img");
-    aspectRatios.push(
-      parseFloat(img.getAttribute("width")) / parseFloat(img.getAttribute("height"))
-    );
   });
 
   if (visibleItems.length === 0) {
@@ -29,25 +25,36 @@ function updateGallery(force = false) {
   if (!force && containerWidth === newWidth) return;
   containerWidth = newWidth;
 
-  const layout = justifiedLayout(aspectRatios, {
-    containerWidth: containerWidth,
-    containerPadding: 0,
-    boxSpacing: 8,
-    targetRowHeight: 288,
-    targetRowHeightTolerance: 0.25,
-  });
+  // Calculate number of columns
+  const numCols = Math.max(1, Math.round(containerWidth / TARGET_COL_WIDTH));
+  const colWidth = (containerWidth - GAP * (numCols - 1)) / numCols;
 
-  visibleItems.forEach((item, i) => {
-    const box = layout.boxes[i];
+  // Track the height of each column
+  const colHeights = new Array(numCols).fill(0);
+
+  visibleItems.forEach((item) => {
+    // Find shortest column
+    const col = colHeights.indexOf(Math.min(...colHeights));
+
+    const img = item.querySelector("img");
+    const aspect =
+      parseFloat(img.getAttribute("width")) / parseFloat(img.getAttribute("height"));
+    const itemHeight = colWidth / aspect;
+
+    const left = col * (colWidth + GAP);
+    const top = colHeights[col];
+
     item.style.position = "absolute";
-    item.style.width = box.width + "px";
-    item.style.height = box.height + "px";
-    item.style.top = box.top + "px";
-    item.style.left = box.left + "px";
+    item.style.width = colWidth + "px";
+    item.style.height = itemHeight + "px";
+    item.style.top = top + "px";
+    item.style.left = left + "px";
+
+    colHeights[col] = top + itemHeight + GAP;
   });
 
   gallery.style.position = "relative";
-  gallery.style.height = layout.containerHeight + "px";
+  gallery.style.height = Math.max(...colHeights) - GAP + "px";
   gallery.style.visibility = "visible";
 }
 
