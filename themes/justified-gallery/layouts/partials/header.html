@@ -1,11 +1,37 @@
 <div class="header-bar">
   <a href="{{ "/" | relURL }}" class="site-title">{{ site.Title }}</a>
-  <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false'); document.querySelector('.nav-menu').classList.toggle('open');">
-    <span class="hamburger-line"></span>
-    <span class="hamburger-line"></span>
-    <span class="hamburger-line"></span>
-  </button>
+  <div class="menu-wrapper">
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    <div class="nav-menu">
+      {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+    </div>
+  </div>
 </div>
-<div class="nav-menu">
-  {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-</div>
+<div class="menu-overlay"></div>
+<script>
+(function() {
+  const btn = document.querySelector('.hamburger');
+  const menu = document.querySelector('.nav-menu');
+  const overlay = document.querySelector('.menu-overlay');
+
+  function toggleMenu() {
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+    menu.classList.toggle('open', !isOpen);
+    overlay.classList.toggle('open', !isOpen);
+  }
+
+  function closeMenu() {
+    btn.setAttribute('aria-expanded', 'false');
+    menu.classList.remove('open');
+    overlay.classList.remove('open');
+  }
+
+  btn.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', closeMenu);
+})();
+</script>

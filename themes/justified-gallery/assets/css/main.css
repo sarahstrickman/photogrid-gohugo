@@ -29,6 +29,11 @@ header {
   opacity: 0.7;
 }
 
+/* Menu wrapper (anchor for popout) */
+.menu-wrapper {
+  position: relative;
+}
+
 /* Hamburger button */
 .hamburger {
   display: flex;
@@ -39,6 +44,8 @@ header {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
+  position: relative;
+  z-index: 1001;
 }
 
 .hamburger-line {
@@ -61,15 +68,27 @@ header {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Nav menu */
+/* Nav menu popout */
 .nav-menu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 1000;
 }
 
 .nav-menu.open {
-  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .nav-menu nav ul {
@@ -80,7 +99,25 @@ header {
 
 .nav-menu nav ul li a {
   display: block;
-  padding: 0.4rem 0;
+  padding: 0.5rem 1rem;
+  color: #222;
+  white-space: nowrap;
+}
+
+.nav-menu nav ul li a:hover {
+  background: #f5f5f5;
+}
+
+/* Overlay to capture outside clicks */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+}
+
+.menu-overlay.open {
+  display: block;
 }
 
 footer {
