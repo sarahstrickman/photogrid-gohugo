@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Commission on perceocrity</title>
+    <link>//localhost:1313/categories/commission/</link>
+    <description>Recent content in Commission on perceocrity</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>user@example.com (Your Name)</managingEditor>
+    <webMaster>user@example.com (Your Name)</webMaster>
+    <copyright>© Your Name</copyright>
+    <lastBuildDate>Mon, 26 Feb 2024 00:00:00 +0100</lastBuildDate><atom:link href="//localhost:1313/categories/commission/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Strickman Endodontics Bay Ridge Dojo</title>
+      <link>//localhost:1313/strickman-endo-brd/</link>
+      <pubDate>Mon, 26 Feb 2024 00:00:00 +0100</pubDate><author>user@example.com (Your Name)</author>
+      <guid>//localhost:1313/strickman-endo-brd/</guid>
+        <media:content url="//localhost:1313/strickman-endo-brd/strickman_endo_brd_promo_poster_hu7008d77fa1c0cbd4820df0503b57e148_6179235_filter_2999419463905045822.png" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;//localhost:1313/strickman-endo-brd/strickman_endo_brd_promo_poster_hu7008d77fa1c0cbd4820df0503b57e148_6179235_filter_2999419463905045822.png&quot; /&gt;
+          &lt;p&gt;skdjf&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>Ioca Logo</title>
+      <link>//localhost:1313/ioca-logo/</link>
+      <pubDate>Tue, 10 Mar 2020 00:00:00 +0100</pubDate><author>user@example.com (Your Name)</author>
+      <guid>//localhost:1313/ioca-logo/</guid>
+        <media:content url="//localhost:1313/ioca-logo/ioca_logo_hu7a74f62711ddaf67b2075a6d37445305_189505_filter_2999419463905045822.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;//localhost:1313/ioca-logo/ioca_logo_hu7a74f62711ddaf67b2075a6d37445305_189505_filter_2999419463905045822.jpg&quot; /&gt;
+          &lt;p&gt;&lt;no value&gt;&lt;/p&gt;
+        </description></item>
+  </channel>
+</rss>

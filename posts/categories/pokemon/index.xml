@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pokemon on perceocrity</title>
+    <link>//localhost:1313/categories/pokemon/</link>
+    <description>Recent content in Pokemon on perceocrity</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>user@example.com (Your Name)</managingEditor>
+    <webMaster>user@example.com (Your Name)</webMaster>
+    <copyright>© Your Name</copyright>
+    <lastBuildDate>Sun, 27 Dec 2015 00:00:00 +0100</lastBuildDate><atom:link href="//localhost:1313/categories/pokemon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swagachu</title>
+      <link>//localhost:1313/swagachu/</link>
+      <pubDate>Sun, 27 Dec 2015 00:00:00 +0100</pubDate><author>user@example.com (Your Name)</author>
+      <guid>//localhost:1313/swagachu/</guid>
+        <media:content url="//localhost:1313/swagachu/swagachu_hu4ee458fb1b3ba04c80e622d3b587bf89_65019_filter_2999419463905045822.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;//localhost:1313/swagachu/swagachu_hu4ee458fb1b3ba04c80e622d3b587bf89_65019_filter_2999419463905045822.jpg&quot; /&gt;
+          &lt;p&gt;This is a placeholder description.&lt;/p&gt;
+        </description></item>
+  </channel>
+</rss>

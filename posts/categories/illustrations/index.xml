@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Illustrations on perceocrity</title>
+    <link>//localhost:1313/categories/illustrations/</link>
+    <description>Recent content in Illustrations on perceocrity</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>user@example.com (Your Name)</managingEditor>
+    <webMaster>user@example.com (Your Name)</webMaster>
+    <copyright>© Your Name</copyright>
+    <lastBuildDate>Thu, 24 Oct 2024 00:00:00 +0200</lastBuildDate><atom:link href="//localhost:1313/categories/illustrations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Strickman Endodontics Bay Ridge Dojo</title>
+      <link>//localhost:1313/strickman-endo-brd/</link>
+      <pubDate>Mon, 26 Feb 2024 00:00:00 +0100</pubDate><author>user@example.com (Your Name)</author>
+      <guid>//localhost:1313/strickman-endo-brd/</guid>
+        <media:content url="//localhost:1313/strickman-endo-brd/strickman_endo_brd_promo_poster_hu7008d77fa1c0cbd4820df0503b57e148_6179235_filter_2999419463905045822.png" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;//localhost:1313/strickman-endo-brd/strickman_endo_brd_promo_poster_hu7008d77fa1c0cbd4820df0503b57e148_6179235_filter_2999419463905045822.png&quot; /&gt;
+          &lt;p&gt;skdjf&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>Self Portrait 1</title>
+      <link>//localhost:1313/self-portrait-1/</link>
+      <pubDate>Fri, 10 Nov 2023 00:00:00 +0100</pubDate><author>user@example.com (Your Name)</author>
+      <guid>//localhost:1313/self-portrait-1/</guid>
+        <media:content url="//localhost:1313/self-portrait-1/self_portrait_3_hu6da9ad8f91ce8322f950003c259e5e62_109553_filter_2999419463905045822.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;//localhost:1313/self-portrait-1/self_portrait_3_hu6da9ad8f91ce8322f950003c259e5e62_109553_filter_2999419463905045822.jpg&quot; /&gt;
+          &lt;p&gt;&lt;no value&gt;&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>Kirby Cursed</title>
+      <link>//localhost:1313/kirby/</link>
+      <pubDate>Thu, 24 Oct 2024 00:00:00 +0200</pubDate><author>user@example.com (Your Name)</author>
+      <guid>//localhost:1313/kirby/</guid>
+        <media:content url="//localhost:1313/kirby/kirby_hu48ea1087b7c9e95335ebc2dbc7425b64_28686_filter_2999419463905045822.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;//localhost:1313/kirby/kirby_hu48ea1087b7c9e95335ebc2dbc7425b64_28686_filter_2999419463905045822.jpg&quot; /&gt;
+          &lt;p&gt;This is a placeholder description.&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>Skykid Aurora</title>
+      <link>//localhost:1313/skykid-aurora/</link>
+      <pubDate>Sat, 07 Sep 2024 00:00:00 +0200</pubDate><author>user@example.com (Your Name)</author>
+      <guid>//localhost:1313/skykid-aurora/</guid>
+        <media:content url="//localhost:1313/skykid-aurora/skykid-aurora_hu7a39a44fe638e353aace179d3ac7d6d8_57260_filter_2999419463905045822.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;//localhost:1313/skykid-aurora/skykid-aurora_hu7a39a44fe638e353aace179d3ac7d6d8_57260_filter_2999419463905045822.jpg&quot; /&gt;
+          &lt;p&gt;This is a placeholder description.&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>Skykid Float</title>
+      <link>//localhost:1313/skykid-float/</link>
+      <pubDate>Sun, 11 Dec 2022 00:00:00 +0100</pubDate><author>user@example.com (Your Name)</author>
+      <guid>//localhost:1313/skykid-float/</guid>
+        <media:content url="//localhost:1313/skykid-float/skykid-float_huaef055a710cc969502e7222de8037286_48495_filter_2999419463905045822.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;//localhost:1313/skykid-float/skykid-float_huaef055a710cc969502e7222de8037286_48495_filter_2999419463905045822.jpg&quot; /&gt;
+          &lt;p&gt;This is a placeholder description.&lt;/p&gt;
+        </description></item>
+  </channel>
+</rss>
