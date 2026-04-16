@@ -1,2 +1,11 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<div class="header-bar">
+  <a href="{{ "/" | relURL }}" class="site-title">{{ site.Title }}</a>
+  <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false'); document.querySelector('.nav-menu').classList.toggle('open');">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+</div>
+<div class="nav-menu">
+  {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+</div>
