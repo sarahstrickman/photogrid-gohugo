@@ -5,19 +5,19 @@ Hugo-based art portfolio/gallery site. Content is stored in a separate repo and 
 ## Tech Stack
 
 - **Hugo** (≥ 0.116.0) — static site generator
-- **Theme:** `justified-gallery` (custom, in `themes/justified-gallery/`)
+- **Theme:** `photogrid` (custom, in `themes/photogrid/`)
 - **Libraries:** Flickr justified-layout, PhotoSwipe, photoswipe-video-plugin (cloned into `assets/references/`)
 
 ## Project Structure
 
 ```
-hugo.toml                   # Site config (title: Perceocrity, theme: justified-gallery)
+hugo.toml                   # Site config (title: Perceocrity, theme: photogrid)
 fetch-content.sh            # Clones/pulls content from perceocrity/perceocrity-contents repo
 fetch-references.sh         # Clones/pulls third-party JS libraries into assets/references/
 
 content/posts/              # Page bundles — one folder per post (separate Git repo)
 layouts/                    # Empty — no theme overrides yet
-themes/justified-gallery/   # Custom theme (layouts, assets, config)
+themes/photogrid/           # Custom theme (layouts, assets, config)
 assets/references/          # Third-party library source (justified-layout, PhotoSwipe)
 static/                     # Empty
 data/                       # Empty
@@ -65,9 +65,9 @@ Nearly every post uses `"artwork"` plus at least one more.
 3. Replace the placeholder image with the actual image
 4. Update frontmatter: `date`, `title`, `src`, uncomment relevant `categories`, set `display: true`
 
-## Theme — `justified-gallery`
+## Theme — `photogrid`
 
-### Layouts (`themes/justified-gallery/layouts/`)
+### Layouts (`themes/photogrid/layouts/`)
 
 | Template         | Purpose                                          |
 |------------------|--------------------------------------------------|

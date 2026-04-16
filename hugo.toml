@@ -1,4 +1,7 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Perceocrity'
-theme = 'justified-gallery'
+theme = 'photogrid'
+
+[markup.goldmark.renderer]
+  unsafe = true

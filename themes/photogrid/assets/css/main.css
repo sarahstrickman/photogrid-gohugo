@@ -374,3 +374,27 @@ a {
   font-size: 1rem;
   pointer-events: none;
 }
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: var(--link);
+  transform: scale(1.15);
+}
