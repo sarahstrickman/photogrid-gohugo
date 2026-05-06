@@ -1,6 +1,6 @@
 name = 'Theme name'
 license = 'MIT'
-licenselink = 'https://github.com/owner/repo/LICENSE'
+licenselink = 'https://github.com/sarahstrickman/photogrid-gohugo/blob/main/themes/photogrid/LICENSE'
 description = 'Theme description'
 
 # The home page of the theme, where the source can be found
